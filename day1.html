@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title></title>
+    <script src="lib/day1.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    // javascript is running in html
+    
+    // number
+    var number1 = 1;
+    var number2 = 1.0;
+    var msg = `number1 = ${number1}\nnumber2 = ${number2}`
+    alert(msg); // 'alert' is js function
+    document.write(`number1 type is ${typeof(number1)}<br/>`); // 'typeof' is js func
+    document.write(`3 power of 2 : ${Math.pow(2, 3)}<br/>`);
+    document.write('<br/>');
+    
+    // string
+    var corp1 = 'naver';
+    var corp2 = 'kakao';
+    document.write(`corp1 : ${corp1}, corp2 : ${corp2}<br/>`);
+    document.write(`corp1 + corp2 = ${corp1} + ${corp2}<br/>`);
+    document.write(`'n' index of corp1 : ${corp1.indexOf('n')}<br/>`);
+    document.write(`corp1 * 3 : ${corp1 * 3}<br/>`);
+    document.write('<br/>');
+
+    // compare == and ===
+    document.write(`1 == 2 : ${1 == 2}<br/>`);
+    document.write(`'1' == 1 : ${'1' == 1}<br/>`);
+    document.write(`'1' === 1 : ${'1' === 1}<br/>`);
+    document.write('<br/>');
+
+    // null : intendedly missing value
+    // undefined : unintendedly missing value
+    document.write(`null == undefined : ${null == undefined}<br/>`);
+    document.write(`null === undefined : ${null === undefined}<br/>`);
+    document.write(`null + undefined : ${null + undefined}<br/>`);
+    document.write(`null + null : ${null + null}<br/>`);
+    document.write(`undefined + undefined : ${undefined + undefined}<br/>`);
+    document.write('<br/>');
+
+    // NaN : Not a Number
+    document.write(`NaN == NaN : ${NaN == NaN}<br/>`);
+    document.write(`NaN === NaN : ${NaN === NaN}<br/>`);
+    document.write('<br/>');
+
+    // boolean : true, false
+    document.write(`true == 1 : ${true == 1}<br/>`);
+    document.write(`false == 0 : ${false == 0}<br/>`);
+    document.write(`true === 1 : ${true === 1}<br/>`);
+    document.write(`false === 0 : ${false === 0}<br/>`);
+    document.write(`false == NaN : ${false == NaN}<br/>`);
+    document.write(`false == null : ${false == null}<br/>`);
+    document.write(`false == undefined : ${false == undefined}<br/>`);
+    document.write(`false + true : ${false + true}<br/>`);
+    document.write(`null + true : ${null + true}<br/>`);
+    document.write('<br/>');
+
+    // condition statement
+    if (NaN) {document.write('NaN is true on condition statement<br/>');}
+    else {document.write('NaN is false on condition statement<br/>');}
+    if (null) {document.write('null is true on condition statement<br/>');}
+    else {document.write('null is false on condition statement<br/>');}
+    if (undefined) {document.write('undefined is true on condition statement<br/>');}
+    else {document.write('undefined is false on condition statement<br/>');}
+    if ("") {document.write('"" is true on condition statement<br/>');}
+    else {document.write('"" is false on condition statement<br/>');}
+    if (0) {document.write('0 is true on condition statement<br/>');}
+    else {document.write('0 is false on condition statement<br/>');}
+    if (-1) {document.write('-1 is true on condition statement<br/>');}
+    else {document.write('-1 is false on condition statement<br/>');}
+    document.write('<br/>');
+
+    // prompt
+    // var msg = prompt('your message');
+    // document.write(`msg : ${msg}, data type of msg : ${typeof(msg)}<br/>`);
+    // document.write('<br/>');
+
+    // logical operator : &&, ||, !
+    document.write(`NaN || true : ${NaN || true}<br/>`);
+    document.write(`!null : ${!null}<br/>`);
+    document.write(`!undefined : ${undefined}<br/>`);
+    document.write(`!NaN : ${!NaN}<br/>`);
+    document.write('<br/>');
+
+    // loop
+    document.write('funny loop!<br/>');
+    for (var i = 0; i < 4; i ++) {
+        document.write('coding everybody <br/>');
+    }
+    document.write('<br/>');
+
+    // function
+    function foo() {
+        var value = 18;
+        document.write(`'value' in function foo : ${value}<br/>`);
+    }
+    foo();
+    var foo2 = function() {
+        var value = 28;
+        document.write(`'value' in function foo2 : ${value}<br/>`);
+    };
+    foo2();
+    (function() {
+            var value = 1828;
+            document.write(`'value' in anonymous function : ${value}<br/>`);
+        })();
+    document.write('<br/>');
+
+    // array
+    var arr = [1, 'lee', NaN, null, undefined, true, false];
+    document.write(`arr = [1, 'lee', NaN, null, undefined, true, false] : ${arr}<br/>`);
+    document.write(`length of arr : ${arr.length}<br/>`);
+    document.write(`arr type : ${arr.constructor}<br/>`);
+    var arr2 = new Array(1,2,3,['asd']);
+    document.write(`arr2 = new Array(1,2,3,['asd']) : ${arr2}<br/>`);
+    document.write(`length of arr2 : ${arr2.length}<br/>`);
+    document.write(`arr2 type : ${arr2.constructor}<br/>`);
+    document.write(`arr2 pop : ${arr2.pop()}<br/>`);
+    arr2.push(18);
+    document.write(`arr2 push 18 : ${arr2}<br/>`);
+    arr2 = arr2.concat(['javascript', 'not', 'easy']);
+    document.write(`arr2 = arr2.concat(['javascript', 'not', 'easy']) : ${arr2}<br/>`);
+    var arr3 = [1, 2];
+    for (var j = 0; j < arr3.length; j++) {
+        document.write(`arr3 ${j}-th value, type : ${arr3[j]}, ${typeof(arr3[j])}<br/>`);
+    }
+    arr3.push('c8c8');
+    document.write(`arr3 push 'c8c8'<br/>`);
+    for (j = 0; j < arr3.length; j++) {
+        document.write(`arr3 ${j}-th value, type : ${arr3[j]}, ${typeof(arr3[j])}<br/>`);
+    }
+    document.write('<br/>');
+
+    // dictionary
+    var dict = {'a': 3, 'b': 99, 'c': 'c8', 'aa': 181818};
+    document.write(`dict type : ${dict.constructor}<br/>`);
+    for (var key in dict) {
+        document.write(`key : value - ${key} : ${dict[key]}<br/>`)
+    }
+    var dict2 = {
+        'values': [1, 2, 3, 'c', 'zz'],
+        'func': function () {
+            for (i=0; i < this.values.length; i++) {
+                document.write(`value, type of dict2.values : ${this.values[i]}, ${typeof(this.values[i])}<br/>`);
+            }
+        }
+    };
+    dict2.func();
+    document.write('<br/>');
+
+    // module
+    writeln('writeln is function of day1.js in lib');
+    writeln();
+</script>
+
+<!--import jquery-->
+<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<ul id="list">
+    <li>empty</li>
+    <li>empty</li>
+    <li>empty</li>
+    <li>empty</li>
+</ul>
+<input id="execute_btn" type="button" value="execute" />
+<script type="text/javascript">
+    $('#execute_btn').click(function(){
+        $('#list li').text('coding everybody');
+    })
+</script>
+</body>
+</html>
